@@ -46,7 +46,7 @@ Article.fetchAll = function() {
     /* When our data is already in localStorage:
     1. We can process and load it,
     2. Then we can render the index page.  */
-    Article.loadAll(JSON.parse(localStorage.blogArticles));
+    Article.loadAll(JSON.parse(localStorage.getItem('blogArticles')));
     articleView.renderIndexPage();
   } else {
     /* Without our localStorage in memory, we need to:
